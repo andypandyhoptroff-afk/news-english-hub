@@ -1,96 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>News English Hub</title>
-  <meta name="description" content="Real news. Human-made lessons. English you can use in class.">
+  <meta name="description" content="Real news. Human-made lessons. English you can use.">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#">
-      <span class="brand-mark">◎</span>
-      <span>
-        <strong>News English <em>Hub</em></strong>
-        <small>Real news. Human-made lessons. English you can use in class.</small>
-      </span>
+    <a class="brand" href="#top" aria-label="News English Hub home">
+      <span class="brand-mark" aria-hidden="true">◎</span>
+      <span><strong>News English Hub</strong><small>Real news. Human-made lessons. English you can use.</small></span>
     </a>
-    <nav>
-      <a class="active" href="#">Home</a>
+    <nav aria-label="Main navigation">
+      <a class="active" href="#top">Home</a>
       <a href="#lessons">Lessons</a>
       <a href="#about">About</a>
       <a href="#resources">Resources</a>
-      <button class="search" aria-label="Search">⌕</button>
+      <button class="search-button" id="searchButton" type="button" aria-label="Search lessons">⌕</button>
     </nav>
   </header>
 
-  <main>
+  <main id="top">
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">LEARN ENGLISH THROUGH THE NEWS</p>
-        <h1>Real news.<br>Real English.</h1>
-        <p class="tagline">Human-made lessons. English you can use.</p>
+        <h1>Learn English<br>through the news.</h1>
+        <p class="hero-tagline">Real news. Human-made lessons. English you can use.</p>
         <p>Daily English lessons based on the stories making the news — carefully selected, adapted and designed for real learners and real classrooms.</p>
-        <a class="button light" href="#today">Today's lesson →</a>
-      </div>
-      <div class="hero-image">
-        <div class="newspaper">DAILY<br><span>NEWS</span></div>
-        <div class="coffee"></div>
-        <div class="notebook">Ideas for<br>the classroom...</div>
       </div>
     </section>
 
-    <section id="today" class="today card">
-      <div class="today-copy">
-        <span class="pill">TODAY'S LESSON</span>
-        <h2>The rise of AI in education</h2>
-        <div class="meta"><span>B2</span><span>Technology</span><span>24 September 2026</span></div>
-        <p>How is artificial intelligence changing the way we learn? This lesson explores the latest developments, benefits and challenges, and gives learners the language to discuss this important topic.</p>
-        <div class="actions">
-          <a class="button" href="#">▶ View presentation</a>
-          <a class="button outline" href="#">⇩ Download worksheet</a>
-        </div>
-      </div>
-      <div class="lesson-image">AI<br><small>LEARNING<br>TOGETHER</small></div>
+    <section id="today" class="today lesson-feature" aria-labelledby="today-title"></section>
+
+    <section id="lessons" class="browse section" aria-labelledby="browse-title">
+      <div class="section-heading"><h2 id="browse-title">Browse lessons</h2><a href="#latest">View all lessons <span>→</span></a></div>
+      <div class="filters" id="filters" aria-label="Filter lessons"></div>
     </section>
 
-    <section id="lessons" class="section">
-      <div class="section-heading">
-        <h2>Browse lessons</h2>
-        <a href="#">View all lessons →</a>
-      </div>
-      <div class="filters">
-        <button class="selected">All levels</button><button>B1</button><button>B2</button><button>C1</button>
-        <span class="divider"></span>
-        <button>Politics</button><button>Sport</button><button>Science</button><button>Environment</button><button>Business</button><button>Culture</button><button>Technology</button>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-heading">
-        <h2>Latest lessons</h2>
-        <a href="#">View all lessons →</a>
-      </div>
-      <div class="lesson-grid">
-        <article class="lesson-card"><div class="thumb climate"></div><div class="card-body"><h3>Climate change and the future</h3><p>B2 · Environment · 23 Sep</p></div></article>
-        <article class="lesson-card"><div class="thumb sport"></div><div class="card-body"><h3>The future of football transfers</h3><p>B1 · Sport · 22 Sep</p></div></article>
-        <article class="lesson-card"><div class="thumb uk"></div><div class="card-body"><h3>UK politics: what happens next?</h3><p>B2 · Politics · 21 Sep</p></div></article>
-        <article class="lesson-card"><div class="thumb social"></div><div class="card-body"><h3>Social media and young people</h3><p>C1 · Culture · 20 Sep</p></div></article>
-      </div>
+    <section id="latest" class="section latest" aria-labelledby="latest-title">
+      <div class="section-heading"><h2 id="latest-title">Latest lessons</h2><a href="#latest">View all lessons <span>→</span></a></div>
+      <div class="lesson-grid" id="lessonGrid"></div>
+      <p class="no-results" id="noResults" hidden>No lessons match those filters.</p>
     </section>
 
     <section id="about" class="values">
-      <div><span>♙</span><h3>Created by teachers</h3><p>Lessons designed with real classrooms and real learners in mind.</p></div>
-      <div><span>✦</span><h3>Relevant & up-to-date</h3><p>Current stories chosen because they are interesting and useful for learners.</p></div>
-      <div><span>▣</span><h3>Two formats</h3><p>Every lesson includes a presentation and a printable classroom worksheet.</p></div>
-      <div><span>♡</span><h3>A personal touch</h3><p>Technology can help with preparation, but every lesson is reviewed and shaped by a human teacher.</p></div>
+      <div><span>♙</span><h3>Created by teachers</h3><p>Lessons designed by experienced teachers for real classrooms.</p></div>
+      <div><span>♧</span><h3>Relevant &amp; up-to-date</h3><p>Current stories that are useful, interesting and relevant for learners.</p></div>
+      <div><span>♧</span><h3>Two formats</h3><p>Each lesson includes a presentation for the classroom and a printable worksheet.</p></div>
+      <div><span>♡</span><h3>A personal touch</h3><p>We use AI to help with research, but every lesson is reviewed, adapted and human.</p></div>
     </section>
   </main>
 
   <footer id="resources">
     <div><strong>News English Hub</strong><small>Real news. Human-made lessons. English you can use.</small></div>
-    <div class="footer-links"><a href="#">Home</a><a href="#lessons">Lessons</a><a href="#about">About</a><a href="#resources">Resources</a></div>
+    <div class="footer-links"><a href="#top">Home</a><a href="#lessons">Lessons</a><a href="#about">About</a><a href="#resources">Resources</a></div>
     <small>© 2026 News English Hub</small>
   </footer>
 </body>
