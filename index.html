@@ -9,54 +9,60 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="News English Hub home">
-      <span class="brand-mark" aria-hidden="true">◎</span>
-      <span><strong>News English Hub</strong><small>Real news. Human-made lessons. English you can use.</small></span>
-    </a>
-    <nav aria-label="Main navigation">
-      <a class="active" href="#top">Home</a>
-      <a href="#lessons">Lessons</a>
-      <a href="#about">About</a>
-      <a href="#resources">Resources</a>
-      <button class="search-button" id="searchButton" type="button" aria-label="Search lessons">⌕</button>
-    </nav>
-  </header>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="News English Hub home">
+        <span class="brand-mark" aria-hidden="true">◎</span>
+        <span>
+          <strong>News English Hub</strong>
+          <small>Real news. Human-made lessons. English you can use.</small>
+        </span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a class="active" href="#top">Home</a>
+        <a href="#lessons">Lessons</a>
+        <a href="#about">About</a>
+        <a href="#resources">Resources</a>
+        <button class="search-button" id="searchButton" type="button" aria-label="Search lessons">⌕</button>
+      </nav>
+    </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-copy">
-        <h1>Learn English<br>through the news.</h1>
-        <p class="hero-tagline">Real news. Human-made lessons. English you can use.</p>
-        <p>Daily English lessons based on the stories making the news — carefully selected, adapted and designed for real learners and real classrooms.</p>
-      </div>
-    </section>
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <h1>Learn English<br>through the news.</h1>
+          <p class="hero-tagline">Real news. Human-made lessons. English you can use.</p>
+          <p>Daily English lessons based on the stories making the news — carefully selected, adapted and designed for real learners and real classrooms.</p>
+        </div>
+        <div class="hero-badge">Better English.<br><span>Bigger perspectives.</span></div>
+      </section>
 
-    <section id="today" class="today lesson-feature" aria-labelledby="today-title"></section>
+      <section id="today" class="today lesson-feature" aria-labelledby="today-title"></section>
 
-    <section id="lessons" class="browse section" aria-labelledby="browse-title">
-      <div class="section-heading"><h2 id="browse-title">Browse lessons</h2><a href="#latest">View all lessons <span>→</span></a></div>
-      <div class="filters" id="filters" aria-label="Filter lessons"></div>
-    </section>
+      <section id="lessons" class="browse section" aria-labelledby="browse-title">
+        <div class="section-heading"><h2 id="browse-title">Browse lessons</h2><a href="#latest">View all lessons <span>→</span></a></div>
+        <div class="filters" id="filters" aria-label="Filter lessons"></div>
+      </section>
 
-    <section id="latest" class="section latest" aria-labelledby="latest-title">
-      <div class="section-heading"><h2 id="latest-title">Latest lessons</h2><a href="#latest">View all lessons <span>→</span></a></div>
-      <div class="lesson-grid" id="lessonGrid"></div>
-      <p class="no-results" id="noResults" hidden>No lessons match those filters.</p>
-    </section>
+      <section id="latest" class="section latest" aria-labelledby="latest-title">
+        <div class="section-heading"><h2 id="latest-title">Latest lessons</h2><a href="#latest">View all lessons <span>→</span></a></div>
+        <div class="lesson-grid" id="lessonGrid"></div>
+        <p class="no-results" id="noResults" hidden>No lessons match those filters.</p>
+      </section>
 
-    <section id="about" class="values">
-      <div><span>♙</span><h3>Created by teachers</h3><p>Lessons designed by experienced teachers for real classrooms.</p></div>
-      <div><span>♧</span><h3>Relevant &amp; up-to-date</h3><p>Current stories that are useful, interesting and relevant for learners.</p></div>
-      <div><span>♧</span><h3>Two formats</h3><p>Each lesson includes a presentation for the classroom and a printable worksheet.</p></div>
-      <div><span>♡</span><h3>A personal touch</h3><p>We use AI to help with research, but every lesson is reviewed, adapted and human.</p></div>
-    </section>
-  </main>
+      <section id="about" class="values">
+        <div><span>♙</span><h3>Created by teachers</h3><p>Lessons designed by experienced teachers for real classrooms.</p></div>
+        <div><span>♧</span><h3>Relevant &amp; up-to-date</h3><p>Current stories that are useful, interesting and relevant for learners.</p></div>
+        <div><span>♧</span><h3>Two formats</h3><p>Each lesson includes a presentation for the classroom and a printable worksheet.</p></div>
+        <div><span>♡</span><h3>A personal touch</h3><p>We use AI to help with research, but every lesson is reviewed, adapted and human.</p></div>
+      </section>
+    </main>
 
-  <footer id="resources">
-    <div><strong>News English Hub</strong><small>Real news. Human-made lessons. English you can use.</small></div>
-    <div class="footer-links"><a href="#top">Home</a><a href="#lessons">Lessons</a><a href="#about">About</a><a href="#resources">Resources</a></div>
-    <small>© 2026 News English Hub</small>
-  </footer>
+    <footer id="resources">
+      <div><strong>News English Hub</strong><small>Real news. Human-made lessons. English you can use.</small></div>
+      <div class="footer-links"><a href="#top">Home</a><a href="#lessons">Lessons</a><a href="#about">About</a><a href="#resources">Resources</a></div>
+      <small>© 2026 News English Hub</small>
+    </footer>
+  </div>
 </body>
 </html>
