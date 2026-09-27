@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About - English News Hub</title>
+    <meta name="description" content="About English News Hub - Real news, human-made lessons.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="site-header">
+            <a class="brand" href="index.html" aria-label="English News Hub home"><span class="brand-mark" aria-hidden="true">◎</span><span><strong>English News Hub</strong><small>Real news. Human-made lessons. English you can use.</small></span></a>
+            <nav aria-label="Main navigation"><a href="index.html">Home</a><a href="index.html#lessons">Lessons</a><a class="active" href="about.html">About</a><a href="index.html#resources">Resources</a></nav>
+        </header>
+        <main class="section" style="padding-top: 30px; padding-bottom: 40px;">
+            <div class="about-section" style="margin: 0 auto;">
+                <h2 style="font-size: 26px; margin-bottom: 16px;">About English News Hub</h2>
+                <p style="font-size: 14px; line-height: 1.6; margin-bottom: 14px;">Daily English lessons based on the stories making the news — carefully selected, adapted and designed for real learners and real classrooms.</p>
+                <p style="font-size: 14px; line-height: 1.6; margin-bottom: 14px;">Created by experienced educators to bridge the gap between current global events and effective language learning, bringing authentic material straight to your lessons.</p>
+            </div>
+        </main>
+        <footer id="resources" class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-brand"><span class="footer-mark">◎</span><div><strong>English News Hub</strong><small>Real news. Human-made lessons. English you can use.</small></div></div>
+                <div class="footer-nav"><a href="index.html">Home</a><a href="index.html#lessons">Lessons</a><a href="about.html">About</a><a href="index.html#resources">Resources</a></div>
+                <div class="copy">&copy; 2026 English News Hub</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
