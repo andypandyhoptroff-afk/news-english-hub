@@ -1,24 +1,4 @@
 [
-    {
-    "title": "Climate change and the future",
-    "date": "23 April 2025",
-    "level": "B2",
-    "topic": "Environment",
-    "description": "A lesson about climate change, adaptation and the choices communities face.",
-    "presentation": "https://drive.google.com/",
-    "worksheet": "https://drive.google.com/",
-    "image": "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=700&q=80"
-  },
-    {
-    "title": "Mortgage Rates Reach 7%",
-    "date": "24 September 2026",
-    "level": "B2",
-    "topic": "Business",
-    "description": "Mortgage rates have soared in the USA. This lesson looks at the reasons, and the impact that this has on future generations.",
-    "presentation": "24 Sept Interest Rates/Presentation.pdf",
-    "worksheet": "24 Sept Interest Rates/Worksheet.pdf",
-    "image": "24 Sept Interest Rates/image.webp"
-  }, 
   {
     "title": "Celebrities and Anxiety",
     "date": "27 September 2026",
@@ -28,6 +8,36 @@
     "presentation": "27 Sept Celebrity and Anxiety/Presentation.pdf",
     "worksheet": "27 Sept Celebrity and Anxiety/Worksheet.pdf",
     "image": "27 Sept Celebrity and Anxiety/image.webp"
+  }, 
+    {
+    "title": "Mortgage Rates Reach 7%",
+    "date": "24 September 2026",
+    "level": "B2",
+    "topic": "Business",
+    "description": "Mortgage rates have soared in the USA. This lesson looks at the reasons, and the impact that this has on future generations.",
+    "presentation": "24 Sept Interest Rates/Presentation.pdf",
+    "worksheet": "24 Sept Interest Rates/Worksheet.pdf",
+    "image": "24 Sept Interest Rates/image.webp"
+  },  
+    {
+    "title": "Huge Events and Pope Visit",
+    "date": "26 Sept 2026",
+    "level": "B2",
+    "topic": "Culture",
+    "description": "Why do so many people attend large events? This lessons looks at reasons why we love big events with a look at the Pope's visit to Paris.",
+    "presentation": "26 Sept Pope and Big Events/Presentation.pdf",
+    "worksheet": "26 Sept Pope and Big Events/Worksheet.pdf",
+    "image": "26 Sept Pope and Big Events/image.webp"
+  },
+    {
+    "title": "Climate change and the future",
+    "date": "23 April 2025",
+    "level": "B2",
+    "topic": "Environment",
+    "description": "A lesson about climate change, adaptation and the choices communities face.",
+    "presentation": "https://drive.google.com/",
+    "worksheet": "https://drive.google.com/",
+    "image": "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=700&q=80"
   },
   {
     "title": "The future of football transfers",
