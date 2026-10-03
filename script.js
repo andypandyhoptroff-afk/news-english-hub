@@ -45,7 +45,7 @@ function renderFilters() {
   const html = [
     ...levels.map(level => `<button class="${state.level === level ? 'selected' : ''}" data-level="${level}" type="button">${level}</button>`),
     '<span class="divider" aria-hidden="true"></span>',
-    ...topics.map(topic => `<button class="${state.topic === topic ? 'selected' : ''}" data-topic="${topic}" type="button">${topic}</button>)
+    ...topics.map(topic => `<button class="${state.topic === topic ? 'selected' : ''}" data-topic="${topic}" type="button">${topic}</button>`)
   ].join('');
 
   document.querySelector('#filters').innerHTML = html;
