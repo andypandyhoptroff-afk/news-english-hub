@@ -1,8 +1,7 @@
 const state = {
   lessons: [],
   level: 'All levels',
-  topic: 'All topics',
-  classType: 'all'
+  topic: 'All topics'
 };
 
 const topics = ['Politics', 'Sport', 'Science', 'Environment', 'Business', 'Culture', 'Technology', 'Health'];
@@ -24,54 +23,13 @@ function renderToday() {
   const lesson = state.lessons[0];
   if (!lesson) return;
 
-  document.querySelector('#today').innerHTML = `
-    <div class="today-copy">
-      <span class="pill">TODAY'S LESSON</span>
-      <h2>${esc(lesson.title)}</h2>
-      <div class="meta">${lessonMeta(lesson)}</div>
-      <p>${esc(lesson.description)}</p>
-      <div class="actions">
-        <a class="button" href="${esc(lesson.presentation)}" target="_blank" rel="noopener">▶ View presentation</a>
-        <a class="button outline" href="${esc(lesson.worksheet)}" target="_blank" rel="noopener" download>⇩ Download worksheet</a>
-      </div>
-    </div>
-    <a
-      class="lesson-image"
-      href="${esc(lesson.presentation)}"
-      target="_blank"
-      rel="noopener"
-      style="background-image:linear-gradient(90deg,rgba(0,30,60,.3),rgba(0,30,60,.05)),url('${esc(lesson.image || imageFallback)}')"
-      aria-label="Open ${esc(lesson.title)} presentation"
-    ></a>
-  `;
-}
-
-function renderClassTabs() {
-  const tabs = ['all', 'grammar', 'vocabulary', 'conversation'];
-
-  document.querySelector('#classTabs').innerHTML = tabs.map(tab => {
-    const label = tab === 'all' ? 'All lessons' : tab.charAt(0).toUpperCase() + tab.slice(1);
-    return `<button class="tab-button ${state.classType === tab ? 'active' : ''}" data-class-type="${tab}" type="button">${label}</button>`;
-  }).join('');
-
-  document.querySelectorAll('#classTabs .tab-button').forEach(button => {
-    button.addEventListener('click', () => {
-      state.classType = button.dataset.classType;
-      renderClassTabs();
-      renderFilters();
-      renderGrid();
-    });
-  });
+  document.querySelector('#today').innerHTML = `<div class="today-copy"><span class="pill">TODAY'S LESSON</span><h2>${esc(lesson.title)}</h2><div class="meta">${lessonMeta(lesson)}</div><p>${esc(lesson.description)}</p><div class="actions"><a class="button" href="${esc(lesson.presentation)}" target="_blank" rel="noopener">▶ View presentation</a><a class="button outline" href="${esc(lesson.worksheet)}" target="_blank" rel="noopener" download>⇩ Download worksheet</a></div></div><a class="lesson-image" href="${esc(lesson.presentation)}" target="_blank" rel="noopener" style="background-image:linear-gradient(90deg,rgba(0,30,60,.3),rgba(0,30,60,.05)),url('${esc(lesson.image || imageFallback)}')" aria-label="Open ${esc(lesson.title)} presentation"></a>`;
 }
 
 function renderFilters() {
   const levels = ['All levels', 'B1', 'B2', 'C1'];
 
-  const html = [
-    ...levels.map(level => `<button class="${state.level === level ? 'selected' : ''}" data-level="${level}" type="button">${level}</button>`),
-    '<span class="divider" aria-hidden="true"></span>',
-    ...topics.map(topic => `<button class="${state.topic === topic ? 'selected' : ''}" data-topic="${topic}" type="button">${topic}</button>`)
-  ].join('');
+  const html = [...levels.map(level => `<button class="${state.level === level ? 'selected' : ''}" data-level="${level}" type="button">${level}</button>`), '<span class="divider" aria-hidden="true"></span>', ...topics.map(topic => `<button class="${state.topic === topic ? 'selected' : ''}" data-topic="${topic}" type="button">${topic}</button>`)].join('');
 
   document.querySelector('#filters').innerHTML = html;
 
@@ -93,28 +51,13 @@ function renderFilters() {
 
 function renderGrid() {
   const filtered = state.lessons.filter((lesson, index) => {
-    const classMatches = state.classType === 'all' || (lesson.classType || '') === state.classType;
     const levelMatches = state.level === 'All levels' || lesson.level === state.level;
     const topicMatches = state.topic === 'All topics' || lesson.topic === state.topic;
 
-    return index > 0 && classMatches && levelMatches && topicMatches;
+    return index > 0 && levelMatches && topicMatches;
   });
 
-  const lessonHtml = filtered.map(lesson => `
-    <article class="lesson-card">
-      <a href="${esc(lesson.presentation)}" target="_blank" rel="noopener">
-        <div class="thumb" style="background-image:url('${esc(lesson.image || imageFallback)}')"></div>
-      </a>
-      <div class="card-body">
-        <h3>${esc(lesson.title)}</h3>
-        <p>${lessonMeta(lesson)}</p>
-        <div class="card-links">
-          <a href="${esc(lesson.presentation)}" target="_blank" rel="noopener">Presentation →</a>
-          <a href="${esc(lesson.worksheet)}" target="_blank" rel="noopener" download>Worksheet ↓</a>
-        </div>
-      </div>
-    </article>
-  `).join('');
+  const lessonHtml = filtered.map(lesson => `<article class="lesson-card"><a href="${esc(lesson.presentation)}" target="_blank" rel="noopener"><div class="thumb" style="background-image:url('${esc(lesson.image || imageFallback)}')"></div></a><div class="card-body"><h3>${esc(lesson.title)}</h3><p>${lessonMeta(lesson)}</p><div class="card-links"><a href="${esc(lesson.presentation)}" target="_blank" rel="noopener">Presentation →</a><a href="${esc(lesson.worksheet)}" target="_blank" rel="noopener" download>Worksheet ↓</a></div></div></article>`).join('');
 
   document.querySelector('#lessonGrid').innerHTML = lessonHtml;
   document.querySelector('#latestGrid').innerHTML = '';
@@ -126,7 +69,6 @@ async function init() {
     const response = await fetch('lessons.json');
     state.lessons = await response.json();
     renderToday();
-    renderClassTabs();
     renderFilters();
     renderGrid();
   } catch (error) {
