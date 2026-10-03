@@ -4,12 +4,122 @@
     "date": "27 September 2026",
     "level": "B1",
     "topic": "Health",
+    "classType": "grammar",
+    "ageGroup": "teens",
     "description": "How has the role of the celebrity changed? This article looks at an unlikely celebrity, and the pressure and anxiety that young people face",
     "presentation": "27 Sept Celebrity and Anxiety/Presentation.pdf",
     "worksheet": "27 Sept Celebrity and Anxiety/Worksheet.pdf",
     "image": "27 Sept Celebrity and Anxiety/image.webp"
-  }, 
-      {
+  },
+  {
+    "title": "Present Perfect: Job Interview",
+    "date": "26 September 2026",
+    "level": "B1",
+    "topic": "Business",
+    "classType": "grammar",
+    "ageGroup": "adults",
+    "description": "Example grammar lesson focusing on present perfect in job interview contexts",
+    "presentation": "example/grammar-b1-adults/Presentation.pdf",
+    "worksheet": "example/grammar-b1-adults/Worksheet.pdf",
+    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=700&q=80"
+  },
+  {
+    "title": "Phrasal Verbs in Sports",
+    "date": "25 September 2026",
+    "level": "B2",
+    "topic": "Sport",
+    "classType": "grammar",
+    "ageGroup": "teens",
+    "description": "Example grammar lesson exploring phrasal verbs through sports contexts",
+    "presentation": "example/grammar-b2-teens/Presentation.pdf",
+    "worksheet": "example/grammar-b2-teens/Worksheet.pdf",
+    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=700&q=80"
+  },
+  {
+    "title": "Conditional Structures: Climate Solutions",
+    "date": "24 September 2026",
+    "level": "C1",
+    "topic": "Environment",
+    "classType": "grammar",
+    "ageGroup": "adults",
+    "description": "Example grammar lesson on conditionals using climate change discussions",
+    "presentation": "example/grammar-c1-adults/Presentation.pdf",
+    "worksheet": "example/grammar-c1-adults/Worksheet.pdf",
+    "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=700&q=80"
+  },
+  {
+    "title": "Food Vocabulary: Restaurant Ordering",
+    "date": "23 September 2026",
+    "level": "B1",
+    "topic": "Health",
+    "classType": "vocabulary",
+    "ageGroup": "teens",
+    "description": "Example vocabulary lesson for ordering food and restaurant situations",
+    "presentation": "example/vocabulary-b1-teens/Presentation.pdf",
+    "worksheet": "example/vocabulary-b1-teens/Worksheet.pdf",
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80"
+  },
+  {
+    "title": "Business Meeting Vocabulary",
+    "date": "22 September 2026",
+    "level": "B2",
+    "topic": "Business",
+    "classType": "vocabulary",
+    "ageGroup": "adults",
+    "description": "Example vocabulary lesson focused on professional workplace language",
+    "presentation": "example/vocabulary-b2-adults/Presentation.pdf",
+    "worksheet": "example/vocabulary-b2-adults/Worksheet.pdf",
+    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=700&q=80"
+  },
+  {
+    "title": "Academic Discourse Vocabulary",
+    "date": "21 September 2026",
+    "level": "C1",
+    "topic": "Science",
+    "classType": "vocabulary",
+    "ageGroup": "adults",
+    "description": "Example vocabulary lesson for advanced academic discussions",
+    "presentation": "example/vocabulary-c1-adults/Presentation.pdf",
+    "worksheet": "example/vocabulary-c1-adults/Worksheet.pdf",
+    "image": "https://images.unsplash.com/photo-1507842217343-583b8c8d4e12?auto=format&fit=crop&w=700&q=80"
+  },
+  {
+    "title": "Conversation: Daily Routines",
+    "date": "20 September 2026",
+    "level": "B1",
+    "topic": "Culture",
+    "classType": "conversation",
+    "ageGroup": "teens",
+    "description": "Example conversation class where students practice describing daily routines and habits",
+    "presentation": "example/conversation-b1-teens/Presentation.pdf",
+    "worksheet": "example/conversation-b1-teens/Worksheet.pdf",
+    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=700&q=80"
+  },
+  {
+    "title": "Conversation: Travel Stories",
+    "date": "19 September 2026",
+    "level": "B2",
+    "topic": "Culture",
+    "classType": "conversation",
+    "ageGroup": "adults",
+    "description": "Example conversation class for discussing travel experiences and cultural encounters",
+    "presentation": "example/conversation-b2-adults/Presentation.pdf",
+    "worksheet": "example/conversation-b2-adults/Worksheet.pdf",
+    "image": "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=700&q=80"
+  },
+  {
+    "title": "Conversation: Future Career Aspirations",
+    "date": "18 September 2026",
+    "level": "C1",
+    "topic": "Business",
+    "classType": "conversation",
+    "ageGroup": "adults",
+    "description": "Example advanced conversation class debating career paths and professional aspirations",
+    "presentation": "example/conversation-c1-adults/Presentation.pdf",
+    "worksheet": "example/conversation-c1-adults/Worksheet.pdf",
+    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=700&q=80"
+  },
+  {
     "title": "Huge Events and Pope Visit",
     "date": "26 Sept 2026",
     "level": "B2",
@@ -19,7 +129,7 @@
     "worksheet": "26 Sept Pope and Big Events/Worksheet.pdf",
     "image": "26 Sept Pope and Big Events/image.webp"
   },
-    {
+  {
     "title": "Mortgage Rates Reach 7%",
     "date": "24 September 2026",
     "level": "B2",
@@ -28,8 +138,8 @@
     "presentation": "24 Sept Interest Rates/Presentation.pdf",
     "worksheet": "24 Sept Interest Rates/Worksheet.pdf",
     "image": "24 Sept Interest Rates/image.webp"
-  },  
-    {
+  },
+  {
     "title": "Climate change and the future",
     "date": "23 April 2025",
     "level": "B2",
