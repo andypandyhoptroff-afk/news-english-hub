@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Classes - Lesson Plan Hub</title>
+  <meta name="description" content="Browse organized classes by type and level.">
+  <link rel="stylesheet" href="style.css">
+  <script src="classes.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Lesson Plan Hub home"><span class="brand-mark" aria-hidden="true">◎</span><span><strong>Lesson Plan Hub</strong><small>Real news. Human-made lessons. English you can use.</small></span></a>
+      <nav aria-label="Main navigation"><a href="index.html">Home</a><a class="active" href="classes.html">Classes</a><a href="about.html">About</a><a href="index.html#resources">Resources</a><button class="search-button" id="searchButton" type="button" aria-label="Search lessons">⌕</button></nav>
+    </header>
+
+    <main id="top">
+      <section class="hero"><div class="hero-copy"><h1>Class Materials<br>by Type.</h1><p class="hero-tagline">Grammar • Vocabulary • Conversation</p><p>Choose a class type below, select your level and age group, and copy the example lessons to create your own.</p></div></section>
+
+      <section class="class-section" id="grammarSection">
+        <div class="section-heading">
+          <h2>Grammar Classes</h2>
+          <p class="section-desc">Structured lessons focused on grammar concepts and language structures.</p>
+        </div>
+        <div class="class-filters" id="grammarFilters"></div>
+        <div class="lesson-grid" id="grammarGrid"></div>
+      </section>
+
+      <section class="class-section" id="vocabularySection">
+        <div class="section-heading">
+          <h2>Vocabulary Classes</h2>
+          <p class="section-desc">Thematic lessons building vocabulary in specific contexts.</p>
+        </div>
+        <div class="class-filters" id="vocabularyFilters"></div>
+        <div class="lesson-grid" id="vocabularyGrid"></div>
+      </section>
+
+      <section class="class-section" id="conversationSection">
+        <div class="section-heading">
+          <h2>Conversation Classes</h2>
+          <p class="section-desc">Interactive lessons designed for speaking practice and discussion.</p>
+        </div>
+        <div class="class-filters" id="conversationFilters"></div>
+        <div class="lesson-grid" id="conversationGrid"></div>
+      </section>
+    </main>
+
+    <footer id="resources" class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand"><span class="footer-mark">◎</span><div><strong>Lesson Plan Hub</strong><small>Real news. Human-made lessons. English you can use.</small></div></div>
+        <div class="footer-nav"><a href="index.html">Home</a><a href="classes.html">Classes</a><a href="about.html">About</a><a href="index.html#resources">Resources</a></div>
+        <div class="copy">&copy; 2026 Lesson Plan Hub</div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
