@@ -51,7 +51,24 @@ function renderGrid() {
     return classMatches && levelMatches && ageMatches;
   });
 
-  const lessonHtml = filtered.map(lesson => `<article class="lesson-card"><a href="${esc(lesson.presentation)}" target="_blank" rel="noopener"><div class="thumb" style="background-image:url('${esc(lesson.image || imageFallback)}')"></div></a><div class="card-body"><h3>${esc(lesson.title)}</h3><p><span>${esc(lesson.level)}</span><span>${esc(lesson.ageGroup || 'General')}</span><span>${esc(lesson.date)}</span></p><div class="card-links"><a href="${esc(lesson.presentation)}" target="_blank" rel="noopener">Presentation →</a><a href="${esc(lesson.worksheet)}" target="_blank" rel="noopener" download>Worksheet ↓</a></div></div></article>`).join('');
+  const lessonHtml = filtered.map(lesson => `
+    <article class="lesson-card">
+      <a href="${esc(lesson.presentation)}" target="_blank" rel="noopener">
+        <div class="thumb" style="background-image:url('${esc(lesson.image || imageFallback)}')"></div>
+      </a>
+      <div class="card-body">
+        <h3>${esc(lesson.title)}</h3>
+        <p>
+          <span>${esc(lesson.level)}</span>
+          <span>${esc(lesson.ageGroup || 'General')}</span>
+        </p>
+        <div class="card-links">
+          <a href="${esc(lesson.presentation)}" target="_blank" rel="noopener">Presentation →</a>
+          <a href="${esc(lesson.worksheet)}" target="_blank" rel="noopener" download>Worksheet ↓</a>
+        </div>
+      </div>
+    </article>
+  `).join('');
 
   document.querySelector('#lessonGrid').innerHTML = lessonHtml || '<p style="text-align:center;color:#999;padding:40px;">No lessons match those filters.</p>';
   document.querySelector('#noResults').hidden = filtered.length > 0;
