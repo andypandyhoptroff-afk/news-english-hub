@@ -17,10 +17,12 @@ function lessonMeta(lesson) {
 }
 
 function renderLatest() {
-  const lesson = state.lessons[0];
+  const newsLessons = state.lessons.filter((lesson, index) => index > 0 && !lesson.classType);
+  const lesson = newsLessons[0];
+  
   if (!lesson) return;
 
-  document.querySelector('#today').innerHTML = `<div class="today-copy"><span class="pill">LATEST CLASS</span><h2>${esc(lesson.title)}</h2><div class="meta">${lessonMeta(lesson)}</div><p>${esc(lesson.description)}</p><div class="actions"><a class="button" href="${esc(lesson.presentation)}" target="_blank" rel="noopener">▶ View presentation</a><a class="button outline" href="${esc(lesson.worksheet)}" target="_blank" rel="noopener" download>⇩ Download worksheet</a></div></div><a class="lesson-image" href="${esc(lesson.presentation)}" target="_blank" rel="noopener" style="background-image:linear-gradient(90deg,rgba(0,30,60,.3),rgba(0,30,60,.05)),url('${esc(lesson.image || imageFallback)}')" aria-label="Open ${esc(lesson.title)} presentation"></a>`;
+  document.querySelector('#today').innerHTML = `<div class="today-copy"><span class="pill">LATEST CLASS</span><h2>${esc(lesson.title)}</h2><div class="meta">${lessonMeta(lesson)}</div><p>${esc(lesson.description)}</p><div class="actions"><a class="button" href="${esc(lesson.presentation)}" target="_blank" rel="noopener">▶ View presentation</a><a class="button outline" href="${esc(lesson.worksheet)}" target="_blank" rel="noopener" download>⇩ Download worksheet</a></div></div><div class="lesson-image" style="background-image:url('${esc(lesson.image || imageFallback)}')"></div>`;
 }
 
 function renderGrid() {
