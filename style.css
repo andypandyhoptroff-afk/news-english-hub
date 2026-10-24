@@ -539,6 +539,17 @@ main {
     align-items: flex-start;
   }
 
+  .filters {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  .filter-group {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 0;
+  }
+
   .actions {
     flex-direction: column;
   }
